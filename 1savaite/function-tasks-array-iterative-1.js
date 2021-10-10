@@ -138,7 +138,13 @@ console.groupEnd();
 
 console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
 {
-  // ...sprendimas ir spausdinimas
+  const drivers = {
+    male: people.filter((p) => 
+    p.hasCar && p.sex === "male").length,
+    female: people.filter((p) => 
+    p.hasCar && p.sex === "female").length,
+  };
+  console.log(drivers);
 }
 console.groupEnd();
 
